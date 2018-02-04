@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url("../fonts/OpenSans-Regular.ttf") format("truetype"),
+    url("../fonts/OpenSans-Regular.woff") format("woff"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: "OpenSansBold";
+    src: url("../fonts/OpenSans-Bold.ttf") format("truetype"),
+    url("../fonts/OpenSans-Bold.woff") format("woff"),
+    url("../fonts/OpenSans-Bold.woff2") format("woff2");
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.uppercase-text {
+    text-transform: uppercase;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+    background-size: cover;
+}
+.header-text {
+    font-family: "OpenSansBold";
+    font-size: 28px;
+    margin-top: calc(201px - 33px - 50px);
+    margin-left: auto;
+    margin-right: auto;
+    /*33px отступ сверху у логотипа и 36зч высота логотипа, можно ыло оставить 201пкс как в макете,
+     но тогда надо было бы поставить абсолютную позицию*/
+    width: calc(100% - 38px);
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    line-height: 2.1;
+}
+.header-text > span {
+    position: relative;
+    margin-left: 45px;
+    line-height: 1.3;
+}
+header svg g {
+    stroke: white;
+}
+header svg .surface-text {
+    stroke: none;
+}
+.surface-logo-with-text {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+header button {
+    color: white;
+    background-color: #5e42b0;
+    width: calc(100% - 40px);
+    height: 35px;
+    border-radius: 18px;
+    border: none;
+}
+header button:first-of-type {
+    margin: 62px auto 0;
+}
+header button:last-of-type {
+    margin: 16px auto 0;
+}
+@media (max-width: 640px) {
+    body {
+        min-width: 320px;
+        max-width: 640px;
+    }
+    header {
+        background-image: url("../images/header-background.png");
+        width: 320px;
+    }
+    .surface-logo-with-text {
+        width: 133px;
+        height: 36px;
+        margin-top: 33px;
+    }
+}
