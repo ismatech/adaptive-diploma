@@ -14,6 +14,13 @@ body {
     margin: 0;
     padding: 0;
 }
+img[alt=mockup] {
+    opacity: 0.5;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .uppercase-text {
     text-transform: uppercase;
 }
@@ -30,18 +37,22 @@ header {
     margin-top: calc(201px - 33px - 50px);
     margin-left: auto;
     margin-right: auto;
-    /*33px отступ сверху у логотипа и 36зч высота логотипа, можно ыло оставить 201пкс как в макете,
+    /*33px отступ сверху у логотипа и 36px высота логотипа, можно ыло оставить 201пкс как в макете,
      но тогда надо было бы поставить абсолютную позицию*/
     width: calc(100% - 38px);
-    letter-spacing: 1px;
     display: flex;
     flex-direction: column;
+
+}
+.header-text > span:first-child {
+    letter-spacing: 1px;
     line-height: 2.1;
 }
-.header-text > span {
+.header-text > span:last-child {
     position: relative;
-    margin-left: 45px;
+    left: 45px;
     line-height: 1.3;
+    letter-spacing: 0.8px;
 }
 header svg g {
     stroke: white;
@@ -68,6 +79,45 @@ header button:first-of-type {
 header button:last-of-type {
     margin: 16px auto 0;
 }
+.apple-download-button, .android-download-button {
+    display: flex;
+}
+.apple-download-button > svg {
+    width: 22px;
+    height: 24px;
+    margin: auto 9px auto 74px;
+}
+.android-download-button > svg {
+    width: 22px;
+    height: 24px;
+    margin: auto 8px auto 74px;
+}
+.apple-download-button > div, .android-download-button > div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.apple-download-button > div > span:first-child {
+    letter-spacing: 0.5px;
+}
+.apple-download-button > div > span:last-child {
+    letter-spacing: 0.4px;
+}
+.android-download-button > div > span:first-child {
+    letter-spacing: 0;
+}
+.android-download-button > div > span:last-child {
+    letter-spacing: 0.7px;
+}
+.apple-download-button .apple-logo, .android-download-button .android-logo {
+    fill: white;
+}
+.apple-download-button > span:first-child, .android-download-button > span:first-child {
+    font-family: "OpenSansRegular";
+}
+.apple-download-button > span:last-child, .android-download-button > span:last-child {
+    font-family: "OpenSansBold";
+}
 @media (max-width: 640px) {
     body {
         min-width: 320px;
@@ -75,11 +125,13 @@ header button:last-of-type {
     }
     header {
         background-image: url("../images/header-background.png");
-        width: 320px;
     }
     .surface-logo-with-text {
         width: 133px;
         height: 36px;
         margin-top: 33px;
+    }
+    .apple-download-button, .android-download-button {
+        font-size: 8px;
     }
 }
