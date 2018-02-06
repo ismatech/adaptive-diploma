@@ -13,6 +13,9 @@
 body {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 img[alt=mockup] {
     opacity: 0.5;
@@ -20,6 +23,7 @@ img[alt=mockup] {
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
 }
 .uppercase-text {
     text-transform: uppercase;
@@ -30,19 +34,17 @@ header {
     color: white;
     height: 100vh;
     background-size: cover;
+    position: relative !important;
 }
 .header-text {
     font-family: "OpenSansBold";
-    font-size: 28px;
-    margin-top: calc(201px - 33px - 50px);
+    position: relative;
+    top: 136px;
     margin-left: auto;
     margin-right: auto;
-    /*33px отступ сверху у логотипа и 36px высота логотипа, можно ыло оставить 201пкс как в макете,
-     но тогда надо было бы поставить абсолютную позицию*/
     width: calc(100% - 38px);
     display: flex;
     flex-direction: column;
-
 }
 .header-text > span:first-child {
     letter-spacing: 1px;
@@ -61,7 +63,6 @@ header svg .surface-text {
     stroke: none;
 }
 .surface-logo-with-text {
-
     margin-left: auto;
     margin-right: auto;
 }
@@ -72,16 +73,12 @@ header button {
     height: 35px;
     border-radius: 18px;
     border: none;
-}
-header button:first-of-type {
-    margin: 62px auto 0;
-}
-header button:last-of-type {
-    margin: 16px auto 0;
-}
-.apple-download-button, .android-download-button {
     display: flex;
+    position: absolute;
+    left: 20px;
+    right: 20px;
 }
+
 .apple-download-button > svg {
     width: 22px;
     height: 24px;
@@ -121,17 +118,39 @@ header button:last-of-type {
 @media (max-width: 640px) {
     body {
         min-width: 320px;
-        max-width: 640px;
+        /*max-width: 640px;*/
     }
     header {
-        background-image: url("../images/header-background.png");
+        background-image: url("../images/header-background_320.png");
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .header-text {
+        font-size: 28px;
     }
     .surface-logo-with-text {
         width: 133px;
         height: 36px;
-        margin-top: 33px;
+        position: relative;
+        top: 33px;
     }
     .apple-download-button, .android-download-button {
         font-size: 8px;
+    }
+    .apple-download-button {
+        bottom: 134px;
+    }
+    .android-download-button {
+        bottom: 84px;
+    }
+}
+@media (min-width: 641px) and (max-width: 960px) {
+    header {
+        background-image: url("../images/header-background_768.png");
+    }
+}
+@media (min-width: 961px) and (max-width: 1900px) {
+    header {
+        background-image: url("../images/header-background_1920.png");
     }
 }
