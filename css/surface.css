@@ -20,6 +20,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: "OpenSansRegular";
 }
 /*для проверки соответствия по макету*/
 img[alt=mockup] {
@@ -101,30 +102,30 @@ header svg .surface-text {
     height: 24px;
     margin: auto 8px auto 74px;
 }
-.apple-download-button > div, .android-download-button > div {
+.apple-download-button > span, .android-download-button > span {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
-.apple-download-button > div > span:first-child {
+.apple-download-button > span > span:first-child {
     letter-spacing: 0.5px;
 }
-.apple-download-button > div > span:last-child {
+.apple-download-button > span > span:last-child {
     letter-spacing: 0.4px;
 }
-.android-download-button > div > span:first-child {
+.android-download-button > span > span:first-child {
     letter-spacing: 0;
 }
-.android-download-button > div > span:last-child {
+.android-download-button > span > span:last-child {
     letter-spacing: 0.7px;
 }
 .apple-download-button .apple-logo, .android-download-button .android-logo {
     fill: white;
 }
-.apple-download-button > span:first-child, .android-download-button > span:first-child {
+.apple-download-button > span > span:first-child, .android-download-button > span > span:first-child {
     font-family: "OpenSansRegular";
 }
-.apple-download-button > span:last-child, .android-download-button > span:last-child {
+.apple-download-button > span > span:last-child, .android-download-button > span > span:last-child {
     font-family: "OpenSansBold";
 }
 .download-app-title {
@@ -195,6 +196,79 @@ img {
         margin-top: 86px;
         top: 0;
     }
+    .athletes-title, .players-title {
+        font-size: 50px;
+        color: #e7e7e7;
+        font-family: "OpenSansBold";
+        margin-left: 20px;
+    }
+    .be-active-title, .work-it-title, .find-contact-title {
+        font-size: 28px;
+        color: #e7e7e7;
+        font-family: "OpenSansBold";
+        margin-left: 20px;
+    }
+    section > h2 {
+        margin-bottom: 0;
+        line-height: 60px;
+    }
+    .connection-block > h3, .collaboration-block > h3, .growth-block > h3 {
+        font-size: 28px;
+        color: #c1c1c1;
+        font-family: "OpenSansBold";
+        margin-left: 20px;
+        line-height: 35px;
+        letter-spacing: 1px;
+    }
+    .first-option, .second-option, .third-option {
+        color: black;
+        font-size: 14px;
+        position: relative;
+        top: -8px;
+    }
+   .first-option::after, .second-option::after, .third-option::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        background-color: #5e42b0;
+    }
+   section p {
+       padding: 0 10px 44px 20px;
+   }
+   .connection-block {
+       background-color: #fafafa;
+   }
+   .collaboration-block {
+       background-color: #f5f4f9;
+   }
+   .athletes .growth-block {
+       background-color: #5e42b0;
+       color: white;
+   }
+   .athletes .growth-block .third-option::after {
+       background-color: white;
+   }
+   .players .growth-block {
+       background-color: #090c35;
+       color: white;
+
+   }
+   .players .growth-block .third-option {
+       color: #8765dd;
+   }
+    .players .growth-block .third-option::after {
+        background-color: white;
+    }
+   .athletes p, .players p {
+       font-size: 15px;
+       line-height: 18px;
+       letter-spacing: 1px;
+   }
 }
 @media (min-width: 641px) and (max-width: 960px) {
     header {
