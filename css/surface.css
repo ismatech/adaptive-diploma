@@ -88,24 +88,21 @@ header svg .surface-text {
     border-radius: 18px;
     border: none;
     display: flex;
+    padding: 0 30%;
 }
 .android-download-button {
     margin-top: 14px;
 }
-.apple-download-button > svg {
+.apple-download-button > svg, .android-download-button > svg {
     width: 22px;
     height: 24px;
-    margin: auto 9px auto 74px;
 }
-.android-download-button > svg {
-    width: 22px;
-    height: 24px;
-    margin: auto 8px auto 74px;
-}
+
 .apple-download-button > span, .android-download-button > span {
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-left: 10px;
 }
 .apple-download-button > span > span:first-child {
     letter-spacing: 0.5px;
