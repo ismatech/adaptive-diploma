@@ -83,48 +83,57 @@ header svg .surface-text {
 .store-buttons > button {
     color: white;
     background-color: #5e42b0;
-    /*width: calc(100% - 40px);*/
     height: 35px;
     border-radius: 18px;
     border: none;
     display: flex;
-    padding: 0 30%;
 }
 .android-download-button {
     margin-top: 14px;
 }
-.apple-download-button > svg, .android-download-button > svg {
-    width: 22px;
-    height: 24px;
+.apple-download-button > .button-content, .android-download-button > .button-content {
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: left;
+    width: 50%;
+    margin: auto;
 }
-
-.apple-download-button > span, .android-download-button > span {
+.store-buttons > button > .button-content > svg {
+    width: 24px;
+    height: 22px;
+    margin-left: auto;
+}
+.android-download-button > .button-content > svg,
+.android-download-button > .button-content > span {
+    position: relative;
+    left: -10px;
+}
+.store-buttons > button > .button-content > span {
     display: flex;
     flex-direction: column;
-    text-align: left;
     margin-left: 10px;
+    margin-right: auto;
 }
-.apple-download-button > span > span:first-child {
+.apple-download-button > .button-content > span > span:first-child {
     letter-spacing: 0.5px;
+    font-family: "OpenSansRegular";
 }
-.apple-download-button > span > span:last-child {
+.apple-download-button > .button-content > span > span:last-child {
     letter-spacing: 0.4px;
+    font-family: "OpenSansBold";
 }
-.android-download-button > span > span:first-child {
+.android-download-button > .button-content > span > span:first-child {
     letter-spacing: 0;
+    font-family: "OpenSansRegular";
 }
-.android-download-button > span > span:last-child {
+.android-download-button > .button-content > span > span:last-child {
     letter-spacing: 0.7px;
+    font-family: "OpenSansBold";
 }
 .apple-download-button .apple-logo, .android-download-button .android-logo {
     fill: white;
 }
-.apple-download-button > span > span:first-child, .android-download-button > span > span:first-child {
-    font-family: "OpenSansRegular";
-}
-.apple-download-button > span > span:last-child, .android-download-button > span > span:last-child {
-    font-family: "OpenSansBold";
-}
+
 .download-app-title {
     color: white;
     margin-bottom: 0;
@@ -135,9 +144,7 @@ header svg .surface-text {
     margin: 0;
     font-family: "OpenSansRegular";
 }
-img {
-    width: 100%;
-}
+
 @media (max-width: 640px) {
     body {
         min-width: 320px;
@@ -163,7 +170,9 @@ img {
     .apple-download-button, .android-download-button {
         font-size: 8px;
     }
-
+    img {
+        width: 100%;
+    }
     footer {
         background-image: url("../images/download_app_320.png");
         -webkit-background-size: cover;
@@ -198,6 +207,11 @@ img {
         color: #e7e7e7;
         font-family: "OpenSansBold";
         margin-left: 20px;
+    }
+    .athletes-logo {
+        width: 56%;
+        max-width: 200px;
+        margin: auto;
     }
     .be-active-title, .work-it-title, .find-contact-title {
         font-size: 28px;
@@ -234,6 +248,26 @@ img {
         left: 0;
         background-color: #5e42b0;
     }
+   .be-active > .rectangle, .find-contact > .rectangle, .work-it > .rectangle {
+       background: #5e42b0;
+       width: 70px;
+       height: 70px;
+       display: flex;
+       margin-left: 20px;
+       margin-top: -58px;
+       position: relative;
+   }
+   .be-active > .rectangle > span::after, .find-contact > .rectangle > span::after,
+   .work-it > .rectangle > span::after{
+       background-color: #8f7bc8;
+   }
+   .be-active > .rectangle >  span,
+   .find-contact > .rectangle >  span,
+   .work-it > .rectangle >  span{
+       margin: auto;
+       color: white;
+       font-family: "OpenSansBold";
+   }
    section p {
        padding: 0 10px 44px 20px;
    }
