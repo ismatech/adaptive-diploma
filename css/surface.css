@@ -48,9 +48,6 @@ header {
 .header-text {
     font-family: "OpenSansBold";
     position: relative;
-    margin-left: 20px;
-    margin-right: 40px;
-    width: 81.25%;
     display: flex;
     flex-direction: column;
 }
@@ -76,15 +73,11 @@ header svg .surface-text {
 .store-buttons {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 88px;
     display: flex;
-    flex-direction: column;
 }
 .store-buttons > button {
     color: white;
     background-color: #5e42b0;
-    height: 35px;
-    border-radius: 18px;
     border: none;
     display: flex;
 }
@@ -162,6 +155,9 @@ header svg .surface-text {
     .header-text {
         font-size: 28px;
         margin-top: 173px;
+        margin-left: 20px;
+        margin-right: 40px;
+        width: 81.25%;
     }
     .surface-logo-with-text {
         width: 41.25%;
@@ -193,6 +189,14 @@ header svg .surface-text {
     }
     .slogan {
         font-size: 14px;
+    }
+    .store-buttons {
+        margin-top: 88px;
+        flex-direction: column;
+    }
+    .store-buttons > button {
+        height: 35px;
+        border-radius: 18px;
     }
     footer .store-buttons {
         margin-top: 76px;
@@ -304,6 +308,43 @@ header svg .surface-text {
 @media (min-width: 641px) and (max-width: 960px) {
     header {
         background-image: url("../images/header-background_768.png");
+    }
+    .surface-logo-with-text {
+        width: 26.7%;
+        height: 56px;
+        margin-top: 40px;
+    }
+    .header-text {
+        font-size: 64px;
+        line-height: 1;
+        width: 93%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 683px;
+        margin-top: 181px;
+    }
+    .store-buttons {
+        width: 85%;
+        flex-flow: row nowrap;
+        margin-top: 312px;
+        margin-bottom: 91px;
+        height: 73px;
+    }
+     .store-buttons > button  {
+         width: 50%;
+         height: 100%;
+         border-radius: 32.5px;
+     }
+     .store-buttons > .android-download-button {
+        margin-left: 31px;
+        margin-top: 0;
+     }
+     .store-buttons > button > .button-content {
+         width: 90%;
+     }
+    .store-buttons > button > .button-content > svg {
+        width: 36px;
+        height: 41px;
     }
 }
 @media (min-width: 961px) and (max-width: 1900px) {
