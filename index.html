@@ -52,7 +52,12 @@
 </header>
 <section class="athletes">
     <h2 class="athletes-title uppercase-text">athletes</h2>
-    <img src="images/footballer_320.png" alt="Footballer" class="athletes-logo">
+    <picture>
+        <source media="(max-width: 640px)" srcset="images/footballer_320.png">
+        <source media="(min-width: 641px) and (max-width: 960px)" srcset="images/footballer_768.png">
+        <source media="(min-width: 961px) and (max-width: 1920px)" srcset="images/footballer_1920.png">
+        <img src="images/footballer_768.png" alt="Footballer">
+    </picture>
     <div class="connection-block">
         <h3 class="uppercase-text">
             <span class="first-option">01</span>

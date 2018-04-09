@@ -137,6 +137,75 @@ header svg .surface-text {
     margin: 0;
     font-family: "OpenSansRegular";
 }
+.surface-logo-without-text {
+    background: linear-gradient(to top, #50379a,#7756d5);
+    border-radius: 25%;
+    box-sizing: border-box;
+}
+.athletes-title, .players-title, .be-active-title, .work-it-title, .find-contact-title {
+        color: #e7e7e7;
+        font-family: "OpenSansBold";
+}
+.connection-block > h3, .collaboration-block > h3, .growth-block > h3 {
+    color: #c1c1c1;
+    font-family: "OpenSansBold";
+}
+.be-active > .rectangle > span::after, .find-contact > .rectangle > span::after,
+   .work-it > .rectangle > span::after{
+       background-color: #8f7bc8;
+   }
+.be-active > .rectangle >  span,
+   .find-contact > .rectangle >  span,
+   .work-it > .rectangle >  span{
+       margin: auto;
+       color: white;
+       font-family: "OpenSansBold";
+   }
+.connection-block {
+    background-color: #fafafa;
+}
+.collaboration-block {
+    background-color: #f5f4f9;
+}
+.athletes .growth-block {
+    background-color: #5e42b0;
+    color: white;
+}
+.athletes .growth-block .third-option::after {
+    background-color: white;
+}
+.players .growth-block {
+    background-color: #090c35;
+    color: white;
+
+}
+.players .growth-block .third-option {
+    color: #8765dd;
+}
+.players .growth-block .third-option::after {
+    background-color: white;
+}
+.be-active > .rectangle, .find-contact > .rectangle, .work-it > .rectangle {
+    background: #5e42b0;
+    display: flex;
+    position: relative;
+}
+.first-option, .second-option, .third-option {
+    color: black;
+    position: relative;
+    top: -8px;
+}
+.first-option::after, .second-option::after, .third-option::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #5e42b0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    bottom: -3px;
+    left: 0;
+}
 
 @media (max-width: 640px) {
     body {
@@ -178,9 +247,6 @@ header svg .surface-text {
         width: 72px;
         height: 74px;
         padding: 12px 6px;
-        background: linear-gradient(to top, #50379a,#7756d5);
-        border-radius: 25%;
-        box-sizing: border-box;
         margin-top: 99px;
     }
     .download-app-title {
@@ -206,21 +272,18 @@ header svg .surface-text {
         margin-top: 86px;
         top: 0;
     }
+
     .athletes-title, .players-title {
         font-size: 50px;
-        color: #e7e7e7;
-        font-family: "OpenSansBold";
         margin-left: 20px;
     }
-    .athletes-logo {
+    .athletes > picture {
         width: 56%;
         max-width: 200px;
         margin: auto;
     }
     .be-active-title, .work-it-title, .find-contact-title {
         font-size: 28px;
-        color: #e7e7e7;
-        font-family: "OpenSansBold";
         margin-left: 20px;
     }
     section > h2 {
@@ -229,76 +292,33 @@ header svg .surface-text {
     }
     .connection-block > h3, .collaboration-block > h3, .growth-block > h3 {
         font-size: 28px;
-        color: #c1c1c1;
-        font-family: "OpenSansBold";
         margin-left: 20px;
         line-height: 35px;
         letter-spacing: 1px;
     }
     .first-option, .second-option, .third-option {
-        color: black;
-        font-size: 14px;
-        position: relative;
-        top: -8px;
+       font-size: 14px;
+
     }
    .first-option::after, .second-option::after, .third-option::after {
-        content: "";
-        display: block;
         width: 100%;
         height: 4px;
         border-radius: 2px;
-        position: absolute;
         bottom: -3px;
         left: 0;
-        background-color: #5e42b0;
     }
    .be-active > .rectangle, .find-contact > .rectangle, .work-it > .rectangle {
-       background: #5e42b0;
        width: 70px;
        height: 70px;
-       display: flex;
        margin-left: 20px;
        margin-top: -58px;
-       position: relative;
    }
-   .be-active > .rectangle > span::after, .find-contact > .rectangle > span::after,
-   .work-it > .rectangle > span::after{
-       background-color: #8f7bc8;
-   }
-   .be-active > .rectangle >  span,
-   .find-contact > .rectangle >  span,
-   .work-it > .rectangle >  span{
-       margin: auto;
-       color: white;
-       font-family: "OpenSansBold";
-   }
+
+
    section p {
        padding: 0 10px 44px 20px;
    }
-   .connection-block {
-       background-color: #fafafa;
-   }
-   .collaboration-block {
-       background-color: #f5f4f9;
-   }
-   .athletes .growth-block {
-       background-color: #5e42b0;
-       color: white;
-   }
-   .athletes .growth-block .third-option::after {
-       background-color: white;
-   }
-   .players .growth-block {
-       background-color: #090c35;
-       color: white;
 
-   }
-   .players .growth-block .third-option {
-       color: #8765dd;
-   }
-    .players .growth-block .third-option::after {
-        background-color: white;
-    }
    .athletes p, .players p {
        font-size: 15px;
        line-height: 18px;
@@ -345,6 +365,52 @@ header svg .surface-text {
     .store-buttons > button > .button-content > svg {
         width: 36px;
         height: 41px;
+    }
+    /*second page*/
+    .athletes-title {
+        font-size: 80px;
+        line-height: 60px;
+        margin-top: 86px;
+        margin-left: 292px;
+        margin-bottom: 0;
+    }
+    .athletes > div {
+        margin-left: 292px;
+        padding-right: 30px;
+    }
+    .athletes > picture {
+        position: absolute;
+        margin-top: 94px;
+        left: -162px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    .connection-block {
+        margin-top: 62px;
+        padding-bottom: 42px;
+    }
+    .connection-block > h3, .collaboration-block > h3, .growth-block > h3 {
+        font-size: 32px;
+        letter-spacing: 0.5px;
+        margin: 20px 0;
+        line-height: 1;
+    }
+    .first-option, .second-option, .third-option {
+        font-size: 18px;
+    }
+    .athletes > div > p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+    }
+    .athletes > .collaboration-block {
+        padding-bottom: 32px;
+    }
+    .athletes .growth-block {
+        margin: 0;
+        padding-left: 292px;
+        padding-bottom: 32px;
     }
 }
 @media (min-width: 961px) and (max-width: 1900px) {
