@@ -142,7 +142,7 @@ header svg .surface-text {
     border-radius: 25%;
     box-sizing: border-box;
 }
-.athletes-title, .players-title, .be-active-title, .work-it-title, .find-contact-title {
+section > h2 {
         color: #e7e7e7;
         font-family: "OpenSansBold";
 }
@@ -367,9 +367,11 @@ header svg .surface-text {
         height: 41px;
     }
     /*second page*/
-    .athletes-title {
+    section > h2 {
         font-size: 80px;
         line-height: 60px;
+    }
+    .athletes-title {
         margin-top: 86px;
         margin-left: 292px;
         margin-bottom: 0;
@@ -382,7 +384,7 @@ header svg .surface-text {
         position: absolute;
         margin-top: 94px;
         left: -162px;
-        flex-shrink: 0;
+        flex-shrink: 1;
         flex-grow: 0;
     }
     .connection-block {
@@ -412,6 +414,16 @@ header svg .surface-text {
         padding-left: 292px;
         padding-bottom: 32px;
     }
+    .players > picture {
+        position: absolute;
+        margin-top: 94px;
+        right: -250px;
+        flex-shrink: 01;
+        flex-grow: 0;
+    }
+    .players > h2, .players > div {
+        padding-left: 27px;
+}
 }
 @media (min-width: 961px) and (max-width: 1900px) {
     header {

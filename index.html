@@ -87,7 +87,12 @@
 </section>
 <section class="players">
     <h2 class="players-title uppercase-text">players</h2>
-    <img src="images/player_320.png" alt="Players" class="players-logo">
+    <picture>
+        <source media="(max-width: 640px)" srcset="images/player_320.png">
+        <source media="(min-width: 641px) and (max-width: 960px)" srcset="images/player_768.png">
+        <source media="(min-width: 961px) and (max-width: 1920px)" srcset="images/player_1920.png">
+        <img src="images/player_768.png" alt="Footballer">
+    </picture>
     <div class="connection-block">
         <h3 class="uppercase-text">
             <span class="first-option">01</span>
