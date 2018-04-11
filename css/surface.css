@@ -37,6 +37,8 @@ img[alt=mockup] {
 header, section, footer {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    position: relative;
 }
 header, footer {
     align-items: center;
@@ -52,10 +54,7 @@ header {
     flex-direction: column;
 }
 
-.header-text > span:last-child {
-    margin-left: 44px;
-    margin-top: 30px;
-}
+
 header svg g, footer svg g {
     stroke: white;
 }
@@ -217,6 +216,10 @@ section > h2 {
         -webkit-background-size: cover;
         background-size: cover;
     }
+    .header-text > span:last-child {
+        margin-left: 44px;
+        margin-top: 31px;
+    }
     .store-buttons {
         width: calc(100% - 40px);
         margin-bottom: 84px;
@@ -224,9 +227,6 @@ section > h2 {
     .header-text {
         font-size: 28px;
         margin-top: 173px;
-        margin-left: 20px;
-        margin-right: 40px;
-        width: 81.25%;
     }
     .surface-logo-with-text {
         width: 41.25%;
@@ -313,6 +313,10 @@ section > h2 {
        margin-left: 20px;
        margin-top: -58px;
    }
+   .players picture {
+       max-width: 100%;
+       margin: auto;
+   }
 
 
    section p {
@@ -337,11 +341,14 @@ section > h2 {
     .header-text {
         font-size: 64px;
         line-height: 1;
-        width: 93%;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 683px;
         margin-top: 181px;
+    }
+    .header-text > span:first-child {
+        margin-left: 85px;
+    }
+    .header-text > span:last-child {
+        margin-left: 185px;
+        margin-top: 31px;
     }
     .store-buttons {
         width: 85%;
@@ -387,7 +394,7 @@ section > h2 {
         flex-shrink: 1;
         flex-grow: 0;
     }
-    .connection-block {
+    .athletes .connection-block {
         margin-top: 62px;
         padding-bottom: 42px;
     }
@@ -414,16 +421,56 @@ section > h2 {
         padding-left: 292px;
         padding-bottom: 32px;
     }
+    .players > .players-title {
+        margin-top: 82px;
+        margin-bottom: 0;
+    }
     .players > picture {
         position: absolute;
-        margin-top: 94px;
-        right: -250px;
-        flex-shrink: 01;
+        margin-top: 37px;
+        right: -255px;
+        flex-shrink: 1;
         flex-grow: 0;
     }
     .players > h2, .players > div {
-        padding-left: 27px;
-}
+        padding-left: 32px;
+        padding-right: 45%;
+    }
+    .players .connection-block {
+        margin-top: 62px;
+    }
+    .players .connection-block > h3, .players .collaboration-block > h3 {
+        margin: 0;
+    }
+    .players .connection-text, .players .collaboration-text {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+    }
+    .players .connection-text {
+        margin-top: 20px;
+        padding-bottom: 30px;
+    }
+    .players .collaboration-block {
+        margin-top: 77px;
+    }
+    .players .collaboration-text {
+        padding-bottom: 71px;
+    }
+    .players .growth-text {
+        font-size: 18px;
+        line-height: 28px;
+        padding-bottom: 52px;
+        margin-top: 24px;
+        letter-spacing: 0.5px;
+    }
+    .players p {
+        margin-bottom: 0;
+    }
+    .growth-block > h3 {
+        margin-top: 32px;
+        margin-bottom: 0;
+    }
 }
 @media (min-width: 961px) and (max-width: 1900px) {
     header {
