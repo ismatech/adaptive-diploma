@@ -22,15 +22,7 @@ body {
     box-sizing: border-box;
     font-family: "OpenSansRegular";
 }
-/*для проверки соответствия по макету*/
-img[alt=mockup] {
-    opacity: 0.5;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-}
+
 .uppercase-text {
     text-transform: uppercase;
 }
@@ -75,9 +67,7 @@ header {
     border: none;
     display: flex;
 }
-.android-download-button {
-    margin-top: 14px;
-}
+
 .apple-download-button > .button-content, .android-download-button > .button-content {
     display: flex;
     flex-flow: row nowrap;
@@ -86,8 +76,6 @@ header {
     margin: auto;
 }
 .store-buttons > button > .button-content > svg {
-    width: 24px;
-    height: 22px;
     margin-left: auto;
 }
 .android-download-button > .button-content > svg,
@@ -236,6 +224,10 @@ picture > img {
     footer {
         background-image: url("../images/footer_background_320.png");
     }
+    .store-buttons > button > .button-content > svg {
+        width: 24px;
+        height: 22px;
+    }
     .surface-logo-without-text {
         width: 72px;
         height: 74px;
@@ -256,6 +248,9 @@ picture > img {
     .store-buttons > button {
         height: 35px;
         border-radius: 18px;
+    }
+    .android-download-button {
+        margin-top: 14px;
     }
     footer .store-buttons {
         margin-top: 76px;
@@ -533,11 +528,261 @@ picture > img {
         margin-bottom: 24px;
     }
 }
-@media (min-width: 961px) and (max-width: 1900px) {
+@media (min-width: 961px) and (max-width: 1920px) {
     header {
         background-image: url("../images/header-background_1920.png");
     }
     footer {
         background-image: url("../images/footer_background_1920.png");
+    }
+    header > .surface-logo-with-text {
+        width: 191px;
+        height: 52px;
+        margin-top: 45px;
+    }
+    .header-text {
+        font-size: 90px;
+        line-height: 1;
+        margin-top: 295px;
+        width: 90%;
+    }
+    .header-text > span:first-child {
+        align-self: left;
+    }
+    .header-text > span:last-child {
+        align-self: right;
+        margin-top: 26px;
+        margin-left: 140px;
+        padding-right: 50px;
+    }
+    .store-buttons {
+        margin-top: 222px;
+        width: 35%;
+        flex-flow: row nowrap;
+        margin-bottom: 110px;
+        height: 77px;
+    }
+    .store-buttons > button {
+        width: 50%;
+        height: 100%;
+        border-radius: 38.5px;
+        font-size: 14px;
+    }
+    .store-buttons > button > .button-content {
+        width: 100%;
+    }
+    .apple-download-button .button-content > svg {
+        width: 42px;
+        height: 48px;
+    }
+    .android-download-button {
+        margin-left: 51px;
+    }
+    .android-download-button .button-content > svg {
+        width: 40px;
+        height: 50px;
+    }
+    .store-buttons > button > .button-content > span {
+        margin: auto auto auto 10px;
+    }
+    /*second page*/
+    section > h2, .download-app-title {
+        font-size: 80px;
+        line-height: 60px;
+    }
+    .athletes-title {
+        margin-top: 115px;
+        margin-left: 60vw;
+        margin-bottom: 0;
+    }
+    .athletes > div {
+        margin-left: 60vw;
+        padding-right: 10px;
+    }
+    .athletes > picture {
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 15vw;
+    }
+    .athletes .connection-block {
+        margin-top: 94px;
+        padding-bottom: 0px;
+    }
+    .connection-block > h3, .collaboration-block > h3, .growth-block > h3 {
+        font-size: 36px;
+        letter-spacing: 0.5px;
+        margin: 0;
+        line-height: 1;
+    }
+    .athletes .first-option, .athletes .second-option, .athletes .third-option,
+    .players .first-option, .players .second-option, .players .third-option{
+        font-size: 18px;
+        top: -12px;
+
+    }
+    .first-option::after, .second-option::after, .third-option::after {
+        bottom: -5px;
+    }
+    .athletes > div > p {
+        margin: 31px 0 0 0;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+    }
+    .athletes > .collaboration-block {
+        padding-bottom: 59px;
+        margin-top: 123px;
+    }
+    .athletes .growth-block {
+        margin: 0;
+        padding-left: 60vw;
+    }
+    .players > .players-title {
+        margin-top: 116px;
+        margin-bottom: 0;
+    }
+    .players > picture {
+        position: absolute;
+        margin-top: -25px;
+        right: 5vw;
+    }
+    .players > h2, .players > div {
+        padding-left: 5vw;
+        width: 35vw;
+        flex-shrink: 0;
+    }
+    .players .connection-block {
+        margin-top: 92px;
+    }
+    .players .connection-block > h3, .players .collaboration-block > h3 {
+        margin: 0;
+    }
+    .players .connection-text, .players .collaboration-text {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+    }
+    .players .connection-text {
+        margin-top: 32px;
+        padding-bottom: 50px;
+    }
+    .players .collaboration-block {
+        margin-top: 62px;
+    }
+    .players .collaboration-text {
+        margin-top: 42px;
+        padding-bottom: 72px;
+    }
+    .players .growth-text {
+        font-size: 18px;
+        line-height: 28px;
+        padding-bottom: 92px;
+        margin-top: 33px;
+        letter-spacing: 0.5px;
+    }
+    .players p {
+        margin-bottom: 0;
+    }
+    .players .growth-block {
+        width: 100%;
+    }
+    .growth-block > h3 {
+       margin-top: 97px;
+    }
+    .athletes .growth-block > .growth-text {
+        padding-bottom: 102px;
+    }
+    .be-active .first-option, .find-contact .second-option, .work-it .third-option {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .rectangle {
+        width: 168px;
+        height: 155px;
+        left: calc(50% - 84px);
+        top: 20%;
+        position: absolute !important;
+    }
+    .find-contact > picture, .work-it > picture, .be-active > picture {
+        width: 50%;
+        max-width: 960px;
+    }
+    .be-active > h2, .work-it > h2 {
+        position: absolute;
+        top: 30%;
+        left: calc(50% + 122px);
+        margin: 0;
+    }
+    /*.be-active > h2, .be-active > p, .find-contact > h2, .find-contact > p, .work-it > h2, .work-it > p {*/
+        /*padding-left: 33px;*/
+    /*}*/
+    .be-active > p, .find-contact > p, .work-it > p {
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+    }
+    .be-active > p, .work-it > p
+    {
+        position: absolute;
+        top: 60%;
+        left: calc(50% + 122px);
+        padding-bottom: 144px;
+        width: 35%;
+        flex-shrink: 1;
+        flex-grow: 0;
+        margin: 0;
+    }
+    .find-contact > picture {
+        align-self: right;
+    }
+    .find-contact > h2 {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        width: 40%;
+        margin: 0;
+    }
+    .find-contact > p {
+        position: absolute;
+        top: 60%;
+        left: 5%;
+        width: 25%;
+        margin: 0;
+    }
+
+    .work-it > p {
+        width: 40%;
+    }
+    footer > svg:first-child {
+        width: 130px;
+        height: 137px;
+        padding: 15px;
+        top: 229px;
+        position: absolute;
+        margin: 0;
+        left: calc(50% - 440px);
+    }
+    .download-app-title {
+        letter-spacing: 1px;
+        position: relative;
+        margin-top: 251px;
+        margin-left: 100px;
+    }
+    .slogan {
+        color: #a496ca;
+        position: relative;
+        margin-top: 10px;
+        left: -15px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    footer > .store-buttons {
+        margin-top: 164px;
+        margin-bottom: 0;
+    }
+    footer > svg:last-child {
+        width: 191px;
+        height: 52px;
+        margin-top: 262px;
+        margin-bottom: 48px;
     }
 }
