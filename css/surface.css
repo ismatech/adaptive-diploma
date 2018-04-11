@@ -42,6 +42,8 @@ header, section, footer {
 }
 header, footer {
     align-items: center;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 header {
     color: white;
@@ -54,13 +56,6 @@ header {
     flex-direction: column;
 }
 
-
-header svg g, footer svg g {
-    stroke: white;
-}
-header svg .surface-text {
-    stroke: none;
-}
 .surface-logo-without-text path:first-child {
     border: 1px solid #4524a5;
 }
@@ -205,7 +200,9 @@ section > h2 {
     bottom: -3px;
     left: 0;
 }
-
+picture > img {
+    width: 100%;
+}
 @media (max-width: 640px) {
     body {
         min-width: 320px;
@@ -213,8 +210,6 @@ section > h2 {
     }
     header {
         background-image: url("../images/header-background_320.png");
-        -webkit-background-size: cover;
-        background-size: cover;
     }
     .header-text > span:last-child {
         margin-left: 44px;
@@ -239,9 +234,7 @@ section > h2 {
         width: 100%;
     }
     footer {
-        background-image: url("../images/download_app_320.png");
-        -webkit-background-size: cover;
-        background-size: cover;
+        background-image: url("../images/footer_background_320.png");
     }
     .surface-logo-without-text {
         width: 72px;
@@ -278,10 +271,11 @@ section > h2 {
         margin-left: 20px;
     }
     .athletes > picture {
-        width: 56%;
-        max-width: 200px;
+        /*width: 56%;*/
+        /*max-width: 200px;*/
         margin: auto;
     }
+
     .be-active-title, .work-it-title, .find-contact-title {
         font-size: 28px;
         margin-left: 20px;
@@ -333,6 +327,9 @@ section > h2 {
     header {
         background-image: url("../images/header-background_768.png");
     }
+    footer {
+        background-image: url("../images/footer_background_768.png");
+    }
     .surface-logo-with-text {
         width: 26.7%;
         height: 56px;
@@ -355,12 +352,12 @@ section > h2 {
         flex-flow: row nowrap;
         margin-top: 312px;
         margin-bottom: 91px;
-        height: 73px;
+        height: 77px;
     }
      .store-buttons > button  {
          width: 50%;
          height: 100%;
-         border-radius: 32.5px;
+         border-radius: 38.5px;
      }
      .store-buttons > .android-download-button {
         margin-left: 31px;
@@ -369,12 +366,16 @@ section > h2 {
      .store-buttons > button > .button-content {
          width: 90%;
      }
-    .store-buttons > button > .button-content > svg {
+    .store-buttons > button:first-child > .button-content > svg {
         width: 36px;
         height: 41px;
     }
+    .store-buttons > button:last-child > .button-content > svg {
+        width: 41px;
+        height: 45px;
+    }
     /*second page*/
-    section > h2 {
+    section > h2, .download-app-title {
         font-size: 80px;
         line-height: 60px;
     }
@@ -404,7 +405,8 @@ section > h2 {
         margin: 20px 0;
         line-height: 1;
     }
-    .first-option, .second-option, .third-option {
+    .athletes .first-option, .athletes .second-option, .athletes .third-option,
+    .players .first-option, .players .second-option, .players .third-option{
         font-size: 18px;
     }
     .athletes > div > p {
@@ -422,7 +424,7 @@ section > h2 {
         padding-bottom: 32px;
     }
     .players > .players-title {
-        margin-top: 82px;
+        margin-top: 83px;
         margin-bottom: 0;
     }
     .players > picture {
@@ -471,9 +473,71 @@ section > h2 {
         margin-top: 32px;
         margin-bottom: 0;
     }
+    .be-active .first-option, .find-contact .second-option, .work-it .third-option {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .rectangle {
+        width: 116px;
+        height: 116px;
+        margin-left: 33px;
+        margin-top: -80px;
+    }
+    .be-active > h2, .be-active > p, .find-contact > h2, .find-contact > p, .work-it > h2, .work-it > p {
+        padding-left: 33px;
+    }
+    .be-active > p, .find-contact > p, .work-it > p {
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+        padding-right: 5%;
+        padding-bottom: 53px;
+        margin-top: 0;
+
+    }
+    .be-active > p
+    {
+        margin-bottom: 35px;
+    }
+    .be-active > h2, .find-contact > h2, .work-it > h2 {
+        margin-top: 55px;
+        margin-bottom: 38px;
+    }
+    .find-contact > p {
+        margin-bottom: 46px;
+    }
+    .work-it > p {
+        margin-bottom: 74px;
+    }
+    footer > svg:first-child {
+        width: 130px;
+        height: 137px;
+        padding: 15px;
+        margin-top: 126px;
+    }
+    .download-app-title {
+        margin-top: 83px;
+        letter-spacing: 1px;
+    }
+    .slogan {
+        color: #a496ca;
+        font-size: 36px;
+        margin-top: 28px;
+    }
+    footer > .store-buttons {
+        margin-top: 288px;
+        margin-bottom: 0;
+    }
+    footer > svg:last-child {
+        margin-top: 55px;
+        margin-bottom: 24px;
+    }
 }
 @media (min-width: 961px) and (max-width: 1900px) {
     header {
         background-image: url("../images/header-background_1920.png");
+    }
+    footer {
+        background-image: url("../images/footer_background_1920.png");
     }
 }
