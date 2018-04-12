@@ -76,7 +76,7 @@ header {
     margin: auto;
 }
 .store-buttons > button > .button-content > svg {
-    margin-left: auto;
+    margin: auto 0 auto auto;
 }
 .android-download-button > .button-content > svg,
 .android-download-button > .button-content > span {
@@ -86,8 +86,7 @@ header {
 .store-buttons > button > .button-content > span {
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
-    margin-right: auto;
+    margin: auto auto auto 10px;
 }
 .apple-download-button > .button-content > span > span:first-child {
     letter-spacing: 0.5px;
@@ -191,6 +190,10 @@ section > h2 {
 picture > img {
     width: 100%;
 }
+button:hover, button:focus {
+    cursor: pointer;
+    background-color: #7e62d0;
+}
 @media (max-width: 640px) {
     body {
         min-width: 320px;
@@ -265,9 +268,9 @@ picture > img {
         font-size: 50px;
         margin-left: 20px;
     }
-    .athletes > picture {
+    .athletes picture {
         /*width: 56%;*/
-        /*max-width: 200px;*/
+        max-width: 200px;
         margin: auto;
     }
 
@@ -342,11 +345,13 @@ picture > img {
         margin-left: 185px;
         margin-top: 31px;
     }
+    header .store-buttons {
+        margin-top: 312px;
+        margin-bottom: 91px;
+    }
     .store-buttons {
         width: 85%;
         flex-flow: row nowrap;
-        margin-top: 312px;
-        margin-bottom: 91px;
         height: 77px;
     }
      .store-buttons > button  {
@@ -426,8 +431,8 @@ picture > img {
         position: absolute;
         margin-top: 37px;
         right: -255px;
-        flex-shrink: 1;
-        flex-grow: 0;
+        flex-shrink: 0;
+        margin-left: 300px;
     }
     .players > h2, .players > div {
         padding-left: 32px;
@@ -557,7 +562,8 @@ picture > img {
     }
     .store-buttons {
         margin-top: 222px;
-        width: 35%;
+        width: 655px;
+        min-width: 655px;
         flex-flow: row nowrap;
         margin-bottom: 110px;
         height: 77px;
@@ -592,17 +598,17 @@ picture > img {
     }
     .athletes-title {
         margin-top: 115px;
-        margin-left: 60vw;
+        margin-left: 800px;
         margin-bottom: 0;
     }
     .athletes > div {
-        margin-left: 60vw;
-        padding-right: 10px;
+        margin-left: 800px;
+        padding-right: 50px;
     }
     .athletes > picture {
         position: absolute;
         margin-top: 0px;
-        margin-left: 15vw;
+        margin-left: 200px;
     }
     .athletes .connection-block {
         margin-top: 94px;
@@ -634,7 +640,7 @@ picture > img {
     }
     .athletes .growth-block {
         margin: 0;
-        padding-left: 60vw;
+        padding-left: 800px;
     }
     .players > .players-title {
         margin-top: 116px;
@@ -643,15 +649,17 @@ picture > img {
     .players > picture {
         position: absolute;
         margin-top: -25px;
-        right: 5vw;
+        right: 0;
+        margin-right: 0;
+        top: 0;
     }
     .players > h2, .players > div {
-        padding-left: 5vw;
-        width: 35vw;
+        padding-left: 5%;
+        width: 35%;
         flex-shrink: 0;
     }
     .players .connection-block {
-        margin-top: 92px;
+        margin-top: 105px;
     }
     .players .connection-block > h3, .players .collaboration-block > h3 {
         margin: 0;
@@ -781,6 +789,42 @@ picture > img {
         height: 52px;
         margin-top: 262px;
         margin-bottom: 48px;
+    }
+}
+@media all and (min-width: 961px) and (max-width: 1420px) {
+    .players > picture {
+        margin-right: 0;
+        margin-left: 35%;
+        margin-top: 5%;
+        margin-bottom: auto;
+    }
+}
+@media all and (min-width: 1061px) and (max-width: 1235px) {
+    .athletes picture {
+        margin-left: 100px;
+    }
+    .athletes > div:not(.growth-block) {
+        margin-left: 700px;
+    }
+    .athletes .growth-block {
+        padding-left: 700px;
+    }
+    .athletes > .athletes-title {
+        margin-left: 700px;
+    }
+}
+@media all and (min-width: 961px) and (max-width: 1060px) {
+    .athletes picture {
+        margin-left: 0px;
+    }
+    .athletes > div:not(.growth-block) {
+        margin-left: 600px;
+    }
+    .athletes .growth-block {
+        padding-left: 600px;
+    }
+    .athletes > .athletes-title {
+        margin-left: 600px;
     }
 }
 @media all and (min-width: 1921px) {
