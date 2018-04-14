@@ -197,22 +197,20 @@ button:hover, button:focus {
 @media (max-width: 640px) {
     body {
         min-width: 320px;
-        /*max-width: 640px;*/
     }
     header {
         background-image: url("../images/header-background_320.png");
     }
+
+     .header-text {
+         font-size: 28px;
+         line-height: 1;
+         padding: 0 20px;
+         margin: 173px auto 0 auto;
+    }
     .header-text > span:last-child {
         margin-left: 44px;
         margin-top: 31px;
-    }
-    .store-buttons {
-        width: calc(100% - 40px);
-        margin-bottom: 84px;
-    }
-    .header-text {
-        font-size: 28px;
-        margin-top: 173px;
     }
     .surface-logo-with-text {
         width: 41.25%;
@@ -240,12 +238,17 @@ button:hover, button:focus {
     .download-app-title {
         font-size: 32px;
         margin-top: 59px;
+        line-height: 1;
+        letter-spacing: 0.5px;
     }
     .slogan {
         font-size: 14px;
+        margin: 14px 0 0 0;
     }
     .store-buttons {
-        margin-top: 88px;
+        width: calc(100% - 40px);
+        padding-bottom: 84px;
+        margin-top: 90px;
         flex-direction: column;
     }
     .store-buttons > button {
@@ -256,37 +259,51 @@ button:hover, button:focus {
         margin-top: 14px;
     }
     footer .store-buttons {
-        margin-top: 76px;
+        margin-top: 77px;
     }
     footer .surface-logo-with-text {
         margin-bottom: 6px;
         margin-top: 86px;
-        top: 0;
     }
 
     .athletes-title, .players-title {
         font-size: 50px;
-        margin-left: 20px;
+        margin: 24px 0 0 0;
+        padding-left: 20px;
+        line-height: 1;
     }
     .athletes picture {
-        /*width: 56%;*/
-        max-width: 200px;
-        margin: auto;
+        position: absolute;
+        top: 92px;
+        left: calc(50% - 96px);
     }
-
+    .players picture {
+        position: absolute;
+        top: 95px;
+        left: calc(50% - 151px);
+    }
+    .connection-block {
+        margin-top: 244px;
+    }
     .be-active-title, .work-it-title, .find-contact-title {
         font-size: 28px;
-        margin-left: 20px;
+        padding-left: 20px;
+        line-height: 1;
     }
-    section > h2 {
-        margin-bottom: 0;
-        line-height: 60px;
-    }
+
     .connection-block > h3, .collaboration-block > h3, .growth-block > h3 {
         font-size: 28px;
-        margin-left: 20px;
-        line-height: 35px;
-        letter-spacing: 1px;
+        padding-left: 20px;
+        line-height: 1;
+        letter-spacing: 0.5px;
+        padding-bottom: 27px;
+        margin: 0;
+    }
+    .connection-block > h3 {
+        padding-top: 80px;
+    }
+    .athletes .collaboration-block > h3, .growth-block > h3 {
+        padding-top: 57px;
     }
     .first-option, .second-option, .third-option {
        font-size: 14px;
@@ -305,20 +322,61 @@ button:hover, button:focus {
        margin-left: 20px;
        margin-top: -58px;
    }
-   .players picture {
-       max-width: 100%;
-       margin: auto;
-   }
+
 
 
    section p {
-       padding: 0 10px 44px 20px;
+       padding-left: 20px;
+       padding-right: 20px;
    }
 
    .athletes p, .players p {
        font-size: 15px;
        line-height: 18px;
        letter-spacing: 1px;
+       margin: 0;
+   }
+   .be-active p, .find-contact p, .work-it p {
+       margin: 0;
+       padding-top: 24px;
+       line-height: 1;
+       font-size: 16px;
+   }
+   .be-active p {
+       padding-bottom: 77px;
+   }
+   .find-contact p {
+       padding-bottom: 78px;
+   }
+   .work-it p {
+       padding-bottom: 57px;
+   }
+   .connection-text {
+       padding-bottom: 51px;
+   }
+   .collaboration-text {
+       padding-bottom: 55px;
+   }
+   .athletes .growth-text {
+       padding-bottom: 36px;
+   }
+   .players .collaboration-text {
+       padding-bottom: 51px;
+   }
+   .players .collaboration-block > h3 {
+       padding-top: 57px;
+   }
+   .players .growth-block > h3 {
+       padding-top: 54px;
+   }
+   .players .growth-text {
+       padding-bottom: 52px;
+   }
+   .be-active-title {
+       margin: 21px 0 0 0;
+   }
+   .find-contact-title, .work-it-title {
+       margin: 25px 0 0 0;
    }
 }
 @media (min-width: 641px) and (max-width: 960px) {
