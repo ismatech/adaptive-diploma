@@ -629,9 +629,15 @@ button:hover, button:focus {
         background-image: url("../images/footer_background_1920.png");
     }
     header > .surface-logo-with-text {
+        margin-top: 45px;
+    }
+    header > .surface-logo-with-text, footer > .surface-logo-with-text {
         width: 191px;
         height: 52px;
-        margin-top: 45px;
+    }
+    footer > .surface-logo-with-text {
+        margin-top: 262px;
+        margin-bottom: 63px;
     }
     .header-text {
         font-size: 90px;
@@ -946,6 +952,7 @@ button:hover, button:focus {
     }
     .find-contact > p {
         min-width: 400px;
+        top: 65%;
     }
     .work-it > .work-it-title {
         top: 30%;
