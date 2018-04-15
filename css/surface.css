@@ -56,7 +56,6 @@ header {
 .surface-logo-with-text {
     margin-left: auto;
     margin-right: auto;
-    /*width: 41.25%;*/
 }
 .store-buttons {
     margin-left: auto;
@@ -196,7 +195,7 @@ button:hover, button:focus {
     cursor: pointer;
     background-color: #7e62d0;
 }
-@media (max-width: 640px) {
+@media all and (max-width: 640px) {
     body {
         min-width: 320px;
     }
@@ -332,14 +331,12 @@ button:hover, button:focus {
    }
    .athletes p, .players p {
        font-size: 15px;
-       line-height: 18px;
        letter-spacing: 1px;
        margin: 0;
    }
    .be-active p, .find-contact p, .work-it p {
        margin: 0;
        padding-top: 24px;
-       line-height: 1;
        font-size: 16px;
    }
    .be-active p {
@@ -383,7 +380,7 @@ button:hover, button:focus {
        outline: none;
    }
 }
-@media (min-width: 641px) and (max-width: 960px) {
+@media all and (min-width: 641px) and (max-width: 960px) {
     header {
         background-image: url("../images/header-background_768.png");
     }
@@ -444,7 +441,6 @@ button:hover, button:focus {
         width: 41px;
         height: 45px;
     }
-    /*second page*/
     section > h2, .download-app-title {
         font-size: 80px;
         line-height: 60px;
@@ -497,9 +493,6 @@ button:hover, button:focus {
         line-height: 28px;
         letter-spacing: 0.5px;
     }
-    /*.athletes > .collaboration-block {*/
-        /*padding-bottom: 32px;*/
-    /*}*/
     .athletes .growth-block {
         margin: 0;
     }
@@ -521,7 +514,6 @@ button:hover, button:focus {
         flex-shrink: 0;
         min-width: 690px;
         max-width: 690px;
-        /*margin-left: 300px;*/
     }
     .players > h2, .players > div {
         padding-left: 32px;
@@ -623,13 +615,13 @@ button:hover, button:focus {
         margin-bottom: 24px;
     }
 }
-@media (min-width: 641px) and (max-width: 750px) {
+@media all and (min-width: 641px) and (max-width: 750px) {
     .players > picture {
         left: 295px;
         right: 0;
     }
 }
-@media (min-width: 961px) and (max-width: 1920px) {
+@media all and (min-width: 961px) and (max-width: 1920px) {
     header {
         background-image: url("../images/header-background_1920.png");
     }
@@ -645,21 +637,22 @@ button:hover, button:focus {
         font-size: 90px;
         line-height: 1;
         margin-top: 295px;
-        width: 90%;
+        width: 100%;
+        max-width: 1600px;
+        min-width: 900px;
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .header-text > span:first-child {
-        align-self: left;
-    }
+
     .header-text > span:last-child {
-        align-self: right;
         margin-top: 26px;
-        margin-left: 140px;
-        padding-right: 50px;
+        margin-left: 451px;
     }
     .store-buttons {
         margin-top: 222px;
-        width: 655px;
-        min-width: 655px;
+        width: 35%;
+        min-width: 672px;
         flex-flow: row nowrap;
         margin-bottom: 110px;
         height: 77px;
@@ -678,7 +671,7 @@ button:hover, button:focus {
         height: 48px;
     }
     .android-download-button {
-        margin-left: 51px;
+        margin-left: 50px;
     }
     .android-download-button .button-content > svg {
         width: 40px;
@@ -687,18 +680,17 @@ button:hover, button:focus {
     .store-buttons > button > .button-content > span {
         margin: auto auto auto 10px;
     }
-    /*second page*/
     section > h2, .download-app-title {
         font-size: 80px;
-        line-height: 60px;
+        line-height: 1;
     }
     .athletes-title {
         margin-top: 115px;
-        margin-left: 800px;
+        padding-left: 800px;
         margin-bottom: 0;
     }
     .athletes > div {
-        margin-left: 800px;
+        padding-left: 800px;
         padding-right: 50px;
     }
     .athletes > picture {
@@ -707,8 +699,15 @@ button:hover, button:focus {
         margin-left: 200px;
     }
     .athletes .connection-block {
-        margin-top: 94px;
+        margin: 0;
         padding-bottom: 0px;
+    }
+    .athletes .connection-block > h3 {
+        padding-top: 94px;
+        padding-bottom: 31px;
+    }
+    .athletes .connection-text {
+        padding-bottom: 60px;
     }
     .connection-block > h3, .collaboration-block > h3, .growth-block > h3 {
         font-size: 36px;
@@ -726,17 +725,32 @@ button:hover, button:focus {
         bottom: -5px;
     }
     .athletes > div > p {
-        margin: 31px 0 0 0;
+        margin: 0;
         font-size: 20px;
         letter-spacing: 0.5px;
     }
+
     .athletes > .collaboration-block {
-        padding-bottom: 59px;
-        margin-top: 123px;
+        padding-bottom: 0;
+        margin: 0;
+    }
+    .athletes .collaboration-block > h3 {
+        padding-top: 63px;
+        padding-bottom: 32px;
+    }
+    .athletes .collaboration-text {
+        padding-bottom: 64px;
     }
     .athletes .growth-block {
         margin: 0;
         padding-left: 800px;
+    }
+    .athletes .growth-block > h3 {
+        padding-top: 90px;
+        padding-bottom: 31px;
+    }
+    .athletes .growth-block > .growth-text {
+        padding-bottom: 102px;
     }
     .players > .players-title {
         margin-top: 116px;
@@ -750,50 +764,55 @@ button:hover, button:focus {
         top: 0;
     }
     .players > h2, .players > div {
-        padding-left: 5%;
-        width: 35%;
-        flex-shrink: 0;
+        padding-left: 200px;
     }
     .players .connection-block {
-        margin-top: 105px;
-    }
-    .players .connection-block > h3, .players .collaboration-block > h3 {
         margin: 0;
     }
+    .players .connection-block > h3 {
+        padding-top: 92px;
+        padding-bottom: 32px;
+    }
+    .players .collaboration-block > h3 {
+        margin: 0;
+        padding-top: 62px;
+        padding-bottom: 41px;
+    }
     .players .connection-text, .players .collaboration-text {
-        font-size: 16px;
+        font-size: 20px;
         line-height: 28px;
         letter-spacing: 0.5px;
+        width: 30%;
+        min-width: 480px;
     }
     .players .connection-text {
-        margin-top: 32px;
-        padding-bottom: 50px;
+        margin: 0;
+        padding-bottom: 71px;
     }
     .players .collaboration-block {
-        margin-top: 62px;
+        margin: 0;
     }
     .players .collaboration-text {
-        margin-top: 42px;
-        padding-bottom: 72px;
+        margin: 0;
+        padding-bottom: 74px;
     }
     .players .growth-text {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 34px;
         padding-bottom: 92px;
-        margin-top: 33px;
+        margin: 0;
         letter-spacing: 0.5px;
     }
     .players p {
         margin-bottom: 0;
     }
-    .players .growth-block {
-        width: 100%;
-    }
-    .growth-block > h3 {
-       margin-top: 97px;
+    .players .growth-block > h3 {
+        padding-top: 97px;
+        padding-bottom: 33px;
     }
     .athletes .growth-block > .growth-text {
-        padding-bottom: 102px;
+        margin: 0;
+        padding-bottom: 92px;
     }
     .be-active .first-option, .find-contact .second-option, .work-it .third-option {
         font-size: 24px;
@@ -808,13 +827,14 @@ button:hover, button:focus {
     }
     .find-contact > picture, .work-it > picture, .be-active > picture {
         width: 50%;
-        max-width: 960px;
+        max-width: 50%;
     }
     .be-active > h2, .work-it > h2 {
-        position: absolute;
-        top: 30%;
-        left: calc(50% + 122px);
         margin: 0;
+        position: absolute;
+        top: 25%;
+        left: calc(50% + 122px);
+
     }
     .be-active > p, .find-contact > p, .work-it > p {
         font-size: 24px;
@@ -824,9 +844,8 @@ button:hover, button:focus {
     .be-active > p, .work-it > p
     {
         position: absolute;
-        top: 60%;
+        top: 55%;
         left: calc(50% + 122px);
-        padding-bottom: 144px;
         width: 35%;
         margin: 0;
     }
@@ -842,10 +861,11 @@ button:hover, button:focus {
     }
     .find-contact > p {
         position: absolute;
-        top: 60%;
+        top: 55%;
         left: 5%;
         width: 25%;
         margin: 0;
+        min-width: 405px;
     }
 
     .work-it > p {
@@ -885,40 +905,113 @@ button:hover, button:focus {
         margin-bottom: 48px;
     }
 }
-@media all and (min-width: 961px) and (max-width: 1420px) {
-    .players > picture {
-        margin-right: 0;
-        margin-left: 35%;
-        margin-top: 5%;
-        margin-bottom: auto;
+@media all and (min-width: 961px) and (max-width: 1175px) {
+    .header-text {
+        max-width: 900px;
+    }
+    .header-text > span:last-child {
+        margin-left: 140px;
     }
 }
-@media all and (min-width: 1061px) and (max-width: 1235px) {
-    .athletes picture {
-        margin-left: 100px;
-    }
-    .athletes > div:not(.growth-block) {
-        margin-left: 700px;
-    }
-    .athletes .growth-block {
-        padding-left: 700px;
-    }
-    .athletes > .athletes-title {
-        margin-left: 700px;
-    }
-}
-@media all and (min-width: 961px) and (max-width: 1060px) {
+
+/*Для текста и картинок в athletes*/
+@media all and (min-width: 961px) and (max-width: 1059px) {
     .athletes picture {
         margin-left: 0px;
     }
+    .players > h2, .players > div {
+        padding-left: 10px;
+    }
+    .players > picture {
+        right: -275px;
+    }
     .athletes > div:not(.growth-block) {
-        margin-left: 600px;
+        padding-left: 600px;
     }
     .athletes .growth-block {
         padding-left: 600px;
     }
     .athletes > .athletes-title {
-        margin-left: 600px;
+        padding-left: 600px;
+    }
+    .be-active .be-active-title, .find-contact .find-contact-title {
+        top: 17%;
+        line-height: 1;
+    }
+    .be-active > p {
+        top: 70%;
+    }
+    .find-contact .find-contact-title, .find-contact > p {
+        left: 0;
+    }
+    .find-contact > p {
+        min-width: 400px;
+    }
+    .work-it > .work-it-title {
+        top: 30%;
+    }
+    .work-it > p {
+        width: 35%;
+        top: 60%;
+    }
+}
+
+/*Для текста и картинок в athletes*/
+@media all and (min-width: 1060px) and (max-width: 1235px) {
+    .athletes picture {
+        margin-left: 100px;
+    }
+    .players > h2, .players > div {
+        padding-left: 100px;
+    }
+    .players > picture {
+        right: -300px;
+    }
+    .athletes > div:not(.growth-block) {
+        padding-left: 700px;
+    }
+    .athletes .growth-block {
+        padding-left: 700px;
+    }
+    .athletes > .athletes-title {
+        padding-left: 700px;
+    }
+
+}
+@media all and (min-width: 1060px) and (max-width: 1528px) {
+    .find-contact > p {
+        width: 35%;
+        min-width: 432px;
+        top: 70%;
+        left: 3%;
+    }
+    .find-contact > .find-contact-title {
+        left: 3%;
+    }
+}
+@media all and (min-width: 1529px) and (max-width: 1600px) {
+    .find-contact > p {
+        left: 3%;
+    }
+    .find-contact > .find-contact-title {
+        left: 3%;
+    }
+}
+@media all and (min-width: 1236px) and (max-width: 1450px) {
+    .players > picture {
+        right: -210px;
+    }
+}
+@media all and (min-width: 1601px) {
+    .players > picture {
+        right: 6.5%;
+    }
+}
+
+
+@media all and (min-width: 1176px) and (max-width: 1529px) {
+    .header-text {
+        max-width: 1200px;
     }
 }
 @media all and (min-width: 1921px) {
@@ -937,20 +1030,22 @@ button:hover, button:focus {
         font-size: 90px;
         line-height: 1;
         margin-top: 295px;
-        width: 90%;
+        width: 100%;
+        max-width: 1600px;
+        min-width: 900px;
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .header-text > span:first-child {
-        align-self: left;
-    }
+
     .header-text > span:last-child {
-        align-self: right;
         margin-top: 26px;
-        margin-left: 140px;
-        padding-right: 50px;
+        margin-left: 451px;
     }
     .store-buttons {
         margin-top: 222px;
         width: 35%;
+        min-width: 672px;
         flex-flow: row nowrap;
         margin-bottom: 110px;
         height: 77px;
@@ -969,7 +1064,7 @@ button:hover, button:focus {
         height: 48px;
     }
     .android-download-button {
-        margin-left: 51px;
+        margin-left: 50px;
     }
     .android-download-button .button-content > svg {
         width: 40px;
@@ -978,29 +1073,34 @@ button:hover, button:focus {
     .store-buttons > button > .button-content > span {
         margin: auto auto auto 10px;
     }
-    /*second page*/
     section > h2, .download-app-title {
         font-size: 80px;
-        line-height: 60px;
+        line-height: 1;
     }
     .athletes-title {
         margin-top: 115px;
-        margin-left: 60vw;
+        padding-left: 800px;
         margin-bottom: 0;
     }
     .athletes > div {
-        margin-left: 60vw;
-        padding-right: 10px;
+        padding-left: 800px;
+        padding-right: 50px;
     }
     .athletes > picture {
         position: absolute;
         margin-top: 0px;
-        margin-left: 15vw;
-        min-width: 600px;
+        margin-left: 200px;
     }
     .athletes .connection-block {
-        margin-top: 94px;
+        margin: 0;
         padding-bottom: 0px;
+    }
+    .athletes .connection-block > h3 {
+        padding-top: 94px;
+        padding-bottom: 31px;
+    }
+    .athletes .connection-text {
+        padding-bottom: 60px;
     }
     .connection-block > h3, .collaboration-block > h3, .growth-block > h3 {
         font-size: 36px;
@@ -1018,17 +1118,32 @@ button:hover, button:focus {
         bottom: -5px;
     }
     .athletes > div > p {
-        margin: 31px 0 0 0;
+        margin: 0;
         font-size: 20px;
         letter-spacing: 0.5px;
     }
+
     .athletes > .collaboration-block {
-        padding-bottom: 59px;
-        margin-top: 123px;
+        padding-bottom: 0;
+        margin: 0;
+    }
+    .athletes .collaboration-block > h3 {
+        padding-top: 63px;
+        padding-bottom: 32px;
+    }
+    .athletes .collaboration-text {
+        padding-bottom: 64px;
     }
     .athletes .growth-block {
         margin: 0;
-        padding-left: 60vw;
+        padding-left: 800px;
+    }
+    .athletes .growth-block > h3 {
+        padding-top: 90px;
+        padding-bottom: 31px;
+    }
+    .athletes .growth-block > .growth-text {
+        padding-bottom: 102px;
     }
     .players > .players-title {
         margin-top: 116px;
@@ -1037,54 +1152,62 @@ button:hover, button:focus {
     .players > picture {
         position: absolute;
         margin-top: -25px;
-        right: 5vw;
-        min-width: 900px;
+        right: unset;
+        margin-right: 0;
+        top: 0;
+        margin-left: 800px;
+        min-width: 960px;
+        max-width: 960px;
     }
     .players > h2, .players > div {
-        padding-left: 5vw;
-        width: 35vw;
-        flex-shrink: 0;
+        padding-left: 200px;
     }
     .players .connection-block {
-        margin-top: 92px;
-    }
-    .players .connection-block > h3, .players .collaboration-block > h3 {
         margin: 0;
     }
+    .players .connection-block > h3 {
+        padding-top: 92px;
+        padding-bottom: 32px;
+    }
+    .players .collaboration-block > h3 {
+        margin: 0;
+        padding-top: 62px;
+        padding-bottom: 41px;
+    }
     .players .connection-text, .players .collaboration-text {
-        font-size: 16px;
+        font-size: 20px;
         line-height: 28px;
         letter-spacing: 0.5px;
+        width: 50%;
     }
     .players .connection-text {
-        margin-top: 32px;
-        padding-bottom: 50px;
+        margin: 0;
+        padding-bottom: 71px;
     }
     .players .collaboration-block {
-        margin-top: 62px;
+        margin: 0;
     }
     .players .collaboration-text {
-        margin-top: 42px;
-        padding-bottom: 72px;
+        margin: 0;
+        padding-bottom: 74px;
     }
     .players .growth-text {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 34px;
         padding-bottom: 92px;
-        margin-top: 33px;
+        margin: 0;
         letter-spacing: 0.5px;
     }
     .players p {
         margin-bottom: 0;
     }
-    .players .growth-block {
-        width: 100%;
-    }
-    .growth-block > h3 {
-        margin-top: 97px;
+    .players .growth-block > h3 {
+        padding-top: 97px;
+        padding-bottom: 33px;
     }
     .athletes .growth-block > .growth-text {
-        padding-bottom: 102px;
+        margin: 0;
+        padding-bottom: 92px;
     }
     .be-active .first-option, .find-contact .second-option, .work-it .third-option {
         font-size: 24px;
@@ -1099,15 +1222,15 @@ button:hover, button:focus {
     }
     .find-contact > picture, .work-it > picture, .be-active > picture {
         width: 50%;
-        max-width: 960px;
+        max-width: 50%;
     }
     .be-active > h2, .work-it > h2 {
-        position: absolute;
-        top: 30%;
-        left: calc(50% + 122px);
         margin: 0;
-    }
+        position: absolute;
+        top: 25%;
+        left: calc(50% + 122px);
 
+    }
     .be-active > p, .find-contact > p, .work-it > p {
         font-size: 24px;
         line-height: 28px;
@@ -1116,16 +1239,13 @@ button:hover, button:focus {
     .be-active > p, .work-it > p
     {
         position: absolute;
-        top: 60%;
+        top: 55%;
         left: calc(50% + 122px);
-        padding-bottom: 144px;
         width: 35%;
-        flex-shrink: 1;
-        flex-grow: 0;
         margin: 0;
     }
     .find-contact > picture {
-        align-self: right;
+        margin-left: auto;
     }
     .find-contact > h2 {
         position: absolute;
@@ -1136,10 +1256,11 @@ button:hover, button:focus {
     }
     .find-contact > p {
         position: absolute;
-        top: 60%;
+        top: 55%;
         left: 5%;
         width: 25%;
         margin: 0;
+        min-width: 405px;
     }
 
     .work-it > p {
